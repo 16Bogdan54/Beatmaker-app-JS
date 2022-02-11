@@ -7,12 +7,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Beats</title>
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon_package_v0.16/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
     <script src="https://kit.fontawesome.com/438840d36f.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="76x76" href="/beatmaker/assets/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/beatmaker/assets/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/beatmaker/assets/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/beatmaker/assets/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="/beatmaker/assets/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -35,14 +35,11 @@
               </div>
             </div>
             <div class="kick">
-              <div class="pad kick-pad b0"></div>
-              <div class="pad kick-pad b1"></div>
-              <div class="pad kick-pad b2"></div>
-              <div class="pad kick-pad b3"></div>
-              <div class="pad kick-pad b4"></div>
-              <div class="pad kick-pad b5"></div>
-              <div class="pad kick-pad b6"></div>
-              <div class="pad kick-pad b7"></div>
+              <?php  
+                for($i = 0; $i < 8; $i++) {
+                  echo "<div class='pad kick-pad b$i'></div>";
+                }
+              ?>
             </div>
         </div>
         <div class="snare-track">
@@ -61,14 +58,11 @@
               </div>
             </div>
             <div class="snare">
-              <div class="pad snare-pad b0"></div>
-              <div class="pad snare-pad b1"></div>
-              <div class="pad snare-pad b2"></div>
-              <div class="pad snare-pad b3"></div>
-              <div class="pad snare-pad b4"></div>
-              <div class="pad snare-pad b5"></div>
-              <div class="pad snare-pad b6"></div>
-              <div class="pad snare-pad b7"></div>
+              <?php  
+                for($i = 0; $i < 8; $i++) {
+                  echo "<div class='pad snare-pad b$i'></div>";
+                }
+              ?>
             </div>
         </div>
         <div class="hihat-track">
@@ -86,14 +80,11 @@
               </div>
             </div>
             <div class="hihat">
-              <div class="pad hihat-pad b0"></div>
-              <div class="pad hihat-pad b1"></div>
-              <div class="pad hihat-pad b2"></div>
-              <div class="pad hihat-pad b3"></div>
-              <div class="pad hihat-pad b4"></div>
-              <div class="pad hihat-pad b5"></div>
-              <div class="pad hihat-pad b6"></div>
-              <div class="pad hihat-pad b7"></div>
+              <?php  
+                for($i = 0; $i < 8; $i++) {
+                  echo "<div class='pad hihat-pad b$i'></div>";
+                }
+              ?>
             </div>
         </div>
 
@@ -107,9 +98,9 @@
         </div>
     </div>
 
-    <audio class="kick-sound" src="/audio/kick-classic.wav"></audio>
-    <audio class="snare-sound" src="/audio/snare-acoustic01.wav"></audio>
-    <audio class="hihat-sound" src="/audio/hihat-acoustic01.wav"></audio>
+    <audio class="kick-sound" src="/beatmaker/audio/kick-classic.wav"></audio>
+    <audio class="snare-sound" src="/beatmaker/audio/snare-acoustic01.wav"></audio>
+    <audio class="hihat-sound" src="/beatmaker/audio/hihat-acoustic01.wav"></audio>
 
     <script src="./index.js"></script>
 </body>
