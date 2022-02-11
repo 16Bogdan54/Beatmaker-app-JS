@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.sequencer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .select-custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(24, 24, 24);
+        padding: 0rem .5rem;
+
+        .select-standart {
+            color: white;
+            appearance: none;
+            background-color: rgb(24, 24, 24);
+            border: none;
+            padding: .5rem;
+            margin: 0;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 1;
+            &::-ms-expand {
+              display: none;
+            }
+            outline: none;
+        }
+    }
+
+    .mute {
+        padding: .5rem;
+        font-size: 1rem;
+        border: none;
+        background-color: rgb(24, 24, 24);
+        color: rgb(89, 88, 88);
+        cursor: pointer;
+        transition: all .5s ease-out;
+
+        i {
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: rgb(216, 193, 63);
+            color: rgb(16, 16, 16);
+        }
+    }
+
+    .kick-track {
+        display: grid;
+        gap: 1;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        width: 90%;
+
+        .controls {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: .5rem 0rem;
+        }
+
+        .kick {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: .5rem 0rem;
+
+            // .active {
+            //     background-color:rgb(2, 110, 11);
+            // }
+
+            .pad {
+                width: calc(3.5vw + 2vh);
+                height: calc(3.5vw + 2vh);
+                margin: .3rem;
+                background-color: rgb(39, 38, 38);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .snare-track {
+        display: grid;
+        gap: 1;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        width: 90%;
+
+        .controls {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: .5rem 0rem;
+        }
+
+        .snare {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: .5rem 0rem;
+
+            .pad {
+                width: calc(3.5vw + 2vh);
+                height: calc(3.5vw + 2vh);
+                margin: .3rem;
+                background-color: rgb(39, 38, 38);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hihat-track {
+        display: grid;
+        gap: 1;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        width: 90%;
+
+        .controls {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: .5rem 0rem;
+        }
+
+        .hihat {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: .5rem 0rem;
+
+            .pad {
+                width: calc(3.5vw + 2vh);
+                height: calc(3.5vw + 2vh);
+                margin: .3rem;
+                background-color: rgb(39, 38, 38);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .music-control {
+        height: 15vh;
+        width: 100%;
+        background-color: rgb(37, 36, 36);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .play {
+            padding: .8rem;
+            font-size: 1rem;
+            background-color: rgb(37, 36, 36);
+            border: none;
+            height: 100%;
+            color: #fff;
+            cursor: pointer;
+            transition: all .5s ease-out;
+            
+            i {
+                pointer-events: none;
+            }
+
+            span {
+                margin: 0rem .5rem;
+            }
+
+            &:hover {
+                background-color:rgb(2, 110, 11);
+            }
+        }
+    }
+
+    .tempo {
+        text-align: center;
+
+        .tempo-slider {
+            -webkit-appearance: none;
+            margin: 1rem 0rem;
+            width: 35vw;
+            position: relative;
+            background: rgb(39, 38, 38);
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        .tempo-slider::-moz-range-progress {
+            background-color: rgb(2, 110, 11);
+            height: 100%; 
+            border-radius: 1rem;
+        }
+
+        .tempo-slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        .tempo-slide::-webkit-slider-thumb {
+            width: 25px;
+            height: 25px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+    }
+
+    @keyframes playTrack {
+        from {
+           transform: scale(1); 
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+}
